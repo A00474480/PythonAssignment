@@ -72,17 +72,19 @@ if uploaded_file is not None:
     image = Image.open(uploaded_file)
     st.image(image, caption='Uploaded Image', use_column_width=True)
 
-    # Preprocess the image
-    processed_image = preprocess_image(image)
+    # Button to predict the image
+    if st.button('Predict'):
+        # Preprocess the image
+        processed_image = preprocess_image(image)
 
-    st.write("Classifying...")
+        st.write("Classifying...")
 
-    # Make a prediction
-    prediction = model.predict(processed_image)
-    predicted_class = np.argmax(prediction, axis=1)
-    confidence = np.max(prediction, axis=1)
+        # Make a prediction
+        prediction = model.predict(processed_image)
+        predicted_class = np.argmax(prediction, axis=1)
+        confidence = np.max(prediction, axis=1)
 
-    # Display the prediction and the confidence
-    st.subheader(f'Predicted digit: {predicted_class[0]} with confidence: {confidence[0]:.2f}')
+        # Display the prediction and the confidence
+        st.subheader(f'Predicted digit: {predicted_class[0]} with confidence: {confidence[0]:.2f}')
 else:
     st.write("Please upload an image.")
