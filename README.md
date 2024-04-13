@@ -43,6 +43,6 @@ streamlit run <filename.py>
 ```
 
 # Streamlit App Urls
-- StockDetailsApp: https://python-assignment-stockdetailsapp.streamlit.app/
-- CoinComparisonApp: https://python-assignment-coincomparisonapp.streamlit.app/
-- Classifier: https://python-assignment-imageclassifier.streamlit.app/
+- StockDetailsApp: https://pythonassignment-stockdetailsapp.streamlit.app/
+- CoinComparisonApp: https://pythonassignment-coincomparisonapp.streamlit.app/
+- Classifier: https://pythonassignment-imageclassifier.streamlit.app/
